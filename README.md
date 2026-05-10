@@ -127,6 +127,16 @@ Build and run with ⌘R. Requires modern Xcode and current Apple platform SDKs.
    - **Bucket Name**
    - **Custom Domain** (optional) — for public URL generation
 
+## Sharing from Finder (macOS)
+
+R2 Vault ships with a Finder Share Extension so you can upload files to R2 without leaving Finder.
+
+1. Launch R2 Vault at least once after installing or updating, so macOS registers the bundled extension.
+2. Enable it in **System Settings → Login Items & Extensions → Sharing** — toggle on **R2 Vault**.
+3. In Finder, right-click any file or folder and choose **Share → R2 Vault**.
+
+The share extension queues the selected files into a shared App Group inbox. Uploads start the next time R2 Vault is running — either while it's already open, or when you next launch / activate it — at which point the queued files are uploaded into the currently selected bucket / prefix using the existing upload flow, so progress, history, and the auto-copy of the public URL all work the same as drag-and-drop uploads.
+
 ## Tech Stack
 
 | Layer | Technology |

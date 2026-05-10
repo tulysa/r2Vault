@@ -7,10 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A4E5C001000000000000A0A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4E5C0010000000000006A0 /* ShareViewController.swift */; };
+		7A4E5C001000000000000B0B /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A4E5C0010000000000002A0 /* ShareExtension.appex */; platformFilter = macos; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AF0DD3E07534A5CB4FB01F4 /* FiaxeLiveActivityExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B45988559F5E4BAFA2B2EBA7 /* FiaxeLiveActivityExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7A4E5C001000000000000C0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B554C0022F54C45F0042921F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4E5C001000000000000101;
+			remoteInfo = ShareExtension;
+		};
 		DF74AB7F48E743DBBDF6EBE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B554C0022F54C45F0042921F /* Project object */;
@@ -28,6 +37,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				8AF0DD3E07534A5CB4FB01F4 /* FiaxeLiveActivityExtension.appex in Embed App Extensions */,
+				7A4E5C001000000000000B0B /* ShareExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +45,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A4E5C0010000000000002A0 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4E5C0010000000000006A0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		7A4E5C0010000000000007A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4E5C0010000000000008A0 /* ShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareExtension.entitlements; sourceTree = "<group>"; };
 		B45988559F5E4BAFA2B2EBA7 /* FiaxeLiveActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FiaxeLiveActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B554C00A2F54C45F0042921F /* R2Vault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R2Vault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -53,6 +67,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A4E5C001000000000000505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B554C0072F54C45F0042921F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,11 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A4E5C0010000000000009A0 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7A4E5C0010000000000006A0 /* ShareViewController.swift */,
+				7A4E5C0010000000000007A0 /* Info.plist */,
+				7A4E5C0010000000000008A0 /* ShareExtension.entitlements */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 		B554C0012F54C45F0042921F = {
 			isa = PBXGroup;
 			children = (
 				B554C00C2F54C45F0042921F /* Fiaxe */,
 				E4AD555212484A8283D19702 /* FiaxeLiveActivityExtension */,
+				7A4E5C0010000000000009A0 /* ShareExtension */,
 				B554C00B2F54C45F0042921F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +116,7 @@
 			children = (
 				B554C00A2F54C45F0042921F /* R2Vault.app */,
 				B45988559F5E4BAFA2B2EBA7 /* FiaxeLiveActivityExtension.appex */,
+				7A4E5C0010000000000002A0 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +124,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A4E5C001000000000000101 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4E5C001000000000000E0E /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				7A4E5C001000000000000303 /* Sources */,
+				7A4E5C001000000000000505 /* Frameworks */,
+				7A4E5C001000000000000404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			packageProductDependencies = (
+			);
+			productName = ShareExtension;
+			productReference = 7A4E5C0010000000000002A0 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		681835841D76415BB3BDFF98 /* FiaxeLiveActivityExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBA1877E4CB64D969A7E4B95 /* Build configuration list for PBXNativeTarget "FiaxeLiveActivityExtension" */;
@@ -127,6 +179,7 @@
 			);
 			dependencies = (
 				AFC414EA26944F9E92339802 /* PBXTargetDependency */,
+				7A4E5C001000000000000D0D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B554C00C2F54C45F0042921F /* Fiaxe */,
@@ -151,6 +204,9 @@
 					681835841D76415BB3BDFF98 = {
 						CreatedOnToolsVersion = 26.3;
 					};
+					7A4E5C001000000000000101 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					B554C0092F54C45F0042921F = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -172,12 +228,20 @@
 			targets = (
 				B554C0092F54C45F0042921F /* Fiaxe */,
 				681835841D76415BB3BDFF98 /* FiaxeLiveActivityExtension */,
+				7A4E5C001000000000000101 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		28C3A762AC88482DB5FF656D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4E5C001000000000000404 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,6 +287,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A4E5C001000000000000303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4E5C001000000000000A0A /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B554C0062F54C45F0042921F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +305,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7A4E5C001000000000000D0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = macos;
+			target = 7A4E5C001000000000000101 /* ShareExtension */;
+			targetProxy = 7A4E5C001000000000000C0C /* PBXContainerItemProxy */;
+		};
 		AFC414EA26944F9E92339802 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			platformFilter = ios;
@@ -242,6 +320,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7A4E5C001000000000000F0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = 38DQ2F7Q9D;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.2.11;
+				PRODUCT_BUNDLE_IDENTIFIER = fiaxe.Fiaxe.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7A4E5C001000000000001010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = ShareExtension/ShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = 38DQ2F7Q9D;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.2.11;
+				PRODUCT_BUNDLE_IDENTIFIER = fiaxe.Fiaxe.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		7C0CD9E324C748B0A09F8CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,6 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = Fiaxe/Fiaxe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 38DQ2F7Q9D;
@@ -436,6 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = Fiaxe/Fiaxe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = 38DQ2F7Q9D;
@@ -506,6 +642,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A4E5C001000000000000E0E /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4E5C001000000000000F0F /* Debug */,
+				7A4E5C001000000000001010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B554C0052F54C45F0042921F /* Build configuration list for PBXProject "Fiaxe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
