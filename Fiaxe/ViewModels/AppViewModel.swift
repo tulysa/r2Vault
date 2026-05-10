@@ -180,8 +180,17 @@ final class AppViewModel {
 
     init() {
         loadCredentials()
-#if os(iOS)
         processShareInbox()
+#if os(macOS)
+        NotificationCenter.default.addObserver(
+            forName: NSApplication.didBecomeActiveNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in
+                self?.processShareInbox()
+            }
+        }
 #endif
     }
 
@@ -729,11 +738,10 @@ final class AppViewModel {
 #endif
     }
 
-    // MARK: - Share Inbox (iOS only)
+    // MARK: - Share Inbox
 
-#if os(iOS)
     /// Reads any files queued by the Share Extension from the shared App Group container
-    /// and uploads them. Called at launch.
+    /// and uploads them. Called at launch and (on macOS) whenever the app becomes active.
     func processShareInbox() {
         let appGroupID = "group.fiaxe.r2Vault"
         guard let defaults = UserDefaults(suiteName: appGroupID),
@@ -752,7 +760,6 @@ final class AppViewModel {
             handleDroppedURLs(urls)
         }
     }
-#endif
 
     // MARK: - Upload
 
